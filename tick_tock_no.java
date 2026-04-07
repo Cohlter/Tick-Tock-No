@@ -1,4 +1,6 @@
 public class tick_tock_no {
+
+    int[][] nine = new int[3][3];
     
 }
 
