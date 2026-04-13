@@ -20,6 +20,10 @@ public class tick_tock_no {
 
     public static char game_loop() {
 
+        if (win == true) {
+            return 'Z';
+        }
+
         System.out.println("You are playing X.");
         System.out.print("What spot would you like to place it? ");
 
