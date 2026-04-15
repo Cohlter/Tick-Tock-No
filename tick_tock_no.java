@@ -4,8 +4,6 @@ public class tick_tock_no {
 
     public static boolean win = false;
 
-    // public static char[] filed;
-
     //print board
 
     public static void printBoard(char[][] board) {
@@ -53,6 +51,21 @@ public class tick_tock_no {
 
         int value = (int) Math.round(Math.random()*10);
         char enemy = Integer.toString(value).charAt(0);
+
+        int rows = board.length;
+        int cols = board[0].length;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (board[i][j] == 'X'){
+                    if (board[i][j] == 'O'){
+                        enemy_spot(board);
+                    }
+                    enemy_spot(board);
+                }
+            }
+        }
+
         return enemy;
 
     }
@@ -88,7 +101,7 @@ public class tick_tock_no {
 
     }
 
-    // 
+    // checks if active tick-tock-no board equals one of the winning solutions
 
     public static void check_winner(char[][] board){
 
